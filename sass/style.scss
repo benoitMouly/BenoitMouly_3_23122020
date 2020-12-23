@@ -1,0 +1,149 @@
+@font-face {
+    src: url("font/Shrikhand-Regular.ttf");
+    font-family: Shrikhand;
+  }
+
+
+$lighter-grey: #fafafa;
+$middle-grey: #f3f3f3;
+$darker-grey: #424242;
+$font-after-icons: 900;
+$colour-logo: black;
+
+
+h2, h3, h4, p{
+
+    font-family: Roboto;
+    font-size: 1rem;
+}
+
+
+.logo, .footer__logo{
+
+    font-family: Shrikhand;
+    text-align: center;
+    font-size: 1.5em;
+    
+    &.footer__logo {
+        text-align: start;
+    }
+}
+
+
+
+#heading{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner{
+
+    z-index: 1;
+    box-shadow: 0px 5px 3px -3px #656565;
+    width: 100%;
+
+}
+
+
+.localisation{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    background: $middle-grey;
+    width: 100%;
+    font-weight: $font-after-icons;
+    color: $darker-grey;
+
+}
+
+.head-2{
+    
+    padding: 30px 0px 30px;
+    text-align: center;
+    background: $lighter-grey;
+
+        &__p{
+            
+        font-weight: 300;
+        }
+        &__h2{
+
+            font-weight: 900;
+        }
+        &__button .btn{
+
+        border-radius: 30px;
+        background: rgb(147,86,220);
+        background: linear-gradient(351deg, rgba(147,86,220,1) 49%, rgba(255,121,218,1) 100%);
+        color: white;
+        outline: none;
+        border: none;
+        font-family: Roboto;
+        font-weight: 500;
+        }
+}
+
+ol {
+    list-style: none;
+    display: block;
+    padding: 0;
+    counter-reset: my-counter;
+  }
+  
+  ol li {
+  counter-increment: my-counter;
+  }
+  
+  ol li::before {
+  content: counter(my-counter) ;
+  }
+  
+  ol.fonctionnement__steps{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  li.fonctionnement__step{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 20px;
+    background-color: #fff;
+    margin: 9px;
+    border-radius: 50px;
+    box-shadow: rgba(0,0,0,0.8) 0 0 10px;
+  }
+
+  .restaurant__lists{
+      display: flex;
+      flex-direction: column;
+      row-gap: 1em;
+  }
+
+  .restaurant__list{
+      display: flex;
+      flex-direction: column;
+      border-radius: 1rem 1rem 1rem 1rem;
+      background-color: $middle-grey;
+        img{
+            object-fit: cover;
+            height: 8rem;
+            border-radius: 1rem 1rem 0rem 0rem;
+        }
+  }
+
+  .list__desc{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-top: 20px;
+  }
+
