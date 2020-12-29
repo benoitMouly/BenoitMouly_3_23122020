@@ -1,19 +1,17 @@
-@font-face {
-  src: url("font/Shrikhand-Regular.ttf");
-  font-family: Shrikhand;
-}
 h2, h3, h4, p {
   font-family: Roboto;
   font-size: 1rem;
 }
 
-.logo, .footer__logo {
+.logo {
   font-family: Shrikhand;
   text-align: center;
   font-size: 1.5em;
 }
-.logo.footer__logo, .footer__logo.footer__logo {
+.logo__footer {
   text-align: start;
+  color: white;
+  font-family: Shrikhand;
 }
 
 #heading {
@@ -63,19 +61,33 @@ h2, h3, h4, p {
   font-weight: 500;
 }
 
-ol {
+ol.fonctionnement__steps {
   list-style: none;
   display: block;
   padding: 0;
   counter-reset: my-counter;
 }
 
-ol li {
+ol.fonctionnement__steps li.fonctionnement__step {
   counter-increment: my-counter;
 }
 
-ol li::before {
+ol.fonctionnement__steps li.fonctionnement__step::before {
   content: counter(my-counter);
+  display: block;
+  position: relative;
+  right: 10px;
+  background: #9356dc;
+  background: linear-gradient(351deg, #9356dc 49%, #ff79da 100%);
+  border-radius: 0.8em;
+  -moz-border-radius: 0.8em;
+  -webkit-border-radius: 0.8em;
+  color: #ffffff;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1.6em;
+  text-align: center;
+  width: 1.6em;
 }
 
 ol.fonctionnement__steps {
@@ -93,6 +105,10 @@ li.fonctionnement__step {
   margin: 9px;
   border-radius: 50px;
   box-shadow: rgba(0, 0, 0, 0.8) 0 0 10px;
+}
+
+li.fonctionnement__step p {
+  font-size: 0.9em;
 }
 
 .restaurant__lists {
@@ -113,12 +129,45 @@ li.fonctionnement__step {
   border-radius: 1rem 1rem 0rem 0rem;
 }
 
+.list__isnew {
+  position: absolute;
+  left: 75%;
+  margin-top: 17px;
+  padding: 10px;
+  font-family: Roboto;
+  font-size: 0.7rem;
+  font-weight: bold;
+  border-radius: 3px;
+  color: #278870;
+  background: #99E2D0;
+  -webkit-box-shadow: 0px 0px 17px 11px rgba(0, 0, 0, 0.17);
+  -moz-box-shadow: 0px 0px 17px 11px rgba(0, 0, 0, 0.17);
+  box-shadow: 0px 0px 17px 11px rgba(0, 0, 0, 0.17);
+}
+
 .list__desc {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 20px;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 20px;
+}
+.list__desc--text h3, .list__desc p {
+  margin: 0px;
+}
+.list__desc--heart {
+  font-size: 1.5rem;
+}
+
+footer {
+  background-color: #1d1d1d;
+}
+footer p {
+  color: white;
+}
+
+.footer__list.ol {
+  list-style: none;
 }
 
 /*# sourceMappingURL=style.css.map */
