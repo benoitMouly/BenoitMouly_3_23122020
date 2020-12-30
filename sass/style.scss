@@ -4,32 +4,37 @@ $darker-grey: #424242;
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
+$general-shadow: rgba(0,0,0,0.2) 0px 3px 8px;
 $font-after-icons: 900;
-$colour-logo: black;
 
 @import "libs/mixins.scss";
 
-
-h2, h3, h4, p{
+    
+body{
 
     font-family: Roboto;
     font-size: 1rem;
+    width: 100%;
+    margin: 0;
 }
 
 
 .logo{
 
     font-family: Shrikhand;
-    text-align: center;
-    font-size: 1.5em;
+    font-size: 1em;
+    line-height: 0;
     
+    &__banner {
+        text-align: center;
+        color: black;
+    }
+
     &__footer {
         text-align: start;
         color: white;
-        font-family: Shrikhand;
     }
 }
-
 
 
 #heading{
@@ -42,7 +47,7 @@ h2, h3, h4, p{
 .banner{
 
     z-index: 1;
-    box-shadow: 0px 5px 3px -3px #656565;
+    box-shadow: $general-shadow;
     width: 100%;
 
 }
@@ -80,16 +85,20 @@ h2, h3, h4, p{
         &__button .btn{
 
         border-radius: 30px;
-        background: rgb(147,86,220);
-        background: linear-gradient(351deg, rgba(147,86,220,1) 49%, rgba(255,121,218,1) 100%);
+        background: linear-gradient(345deg, rgba(147,86,220,1) 35%, rgba(255,121,218,1) 91%);
+        box-shadow: $general-shadow;
         color: white;
         outline: none;
         border: none;
         font-family: Roboto;
-        font-weight: 500;
+        font-weight: 600;
+        border-radius: 40px;
         }
 }
 
+#fonctionnement, #restaurants{
+    margin: 10px;
+}
 ol.fonctionnement__steps {
     list-style: none;
     display: block;
@@ -107,8 +116,7 @@ ol.fonctionnement__steps li.fonctionnement__step {
     display: block;
     position: relative;
     right:10px;
-    background: rgb(147,86,220);
-    background: linear-gradient(351deg, rgba(147,86,220,1) 49%, rgba(255,121,218,1) 100%);
+    background: $primary-color;
     border-radius: 0.8em;
     -moz-border-radius: 0.8em;
     -webkit-border-radius: 0.8em;
@@ -130,13 +138,16 @@ ol.fonctionnement__steps li.fonctionnement__step {
     display: flex;
     flex-direction: row;
     align-items: center;
-    column-gap: 20px;
+    column-gap: 10px;
     background-color: #fff;
     margin: 9px;
     border-radius: 50px;
-    box-shadow: rgba(0,0,0,0.8) 0 0 10px;
+    box-shadow:$general-shadow;
+    font-family: Roboto;
   }
-
+.i.fas.fa-mobile-alt{
+    align-items: stretch;
+}
   li.fonctionnement__step p{
       font-size: 0.9em;
   }
@@ -146,7 +157,7 @@ ol.fonctionnement__steps li.fonctionnement__step {
   .restaurant__lists{
       display: flex;
       flex-direction: column;
-      row-gap: 1em;
+      row-gap: 1.5em;
   }
 
   .restaurant__list{
@@ -156,6 +167,7 @@ ol.fonctionnement__steps li.fonctionnement__step {
       background-color: $middle-grey;
         img{
             object-fit: cover;
+            
             height: 8rem;
             border-radius: 1rem 1rem 0rem 0rem;
         }
@@ -172,9 +184,9 @@ ol.fonctionnement__steps li.fonctionnement__step {
     border-radius: 3px;
     color: darken($tertiary-color, 40% );
     background: $tertiary-color;
-    -webkit-box-shadow: 0px 0px 17px 11px rgba(0,0,0,0.17);
-    -moz-box-shadow: 0px 0px 17px 11px rgba(0,0,0,0.17);
-    box-shadow: 0px 0px 17px 11px rgba(0,0,0,0.17);
+    -webkit-box-shadow: $general-shadow;
+    -moz-box-shadow: $general-shadow;
+    box-shadow: $general-shadow;
     
 }
   .list__desc{
@@ -197,14 +209,36 @@ ol.fonctionnement__steps li.fonctionnement__step {
 
 
 footer{
-    background-color: rgb(29, 29, 29);
 
-    & p{
-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #292B2C;
+}
+
+.footer__elements{
+
+    margin-left: 5%;
+    line-height: 0px;
+
+}
+
+
+.footer__list{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    list-style: none;
+    padding: 0;
+    font-weight: 450;
+
+    &--element{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 5px;
+        list-style: none;
     }
-
 }
 
-.footer__list.ol{
-list-style: none;
-}
