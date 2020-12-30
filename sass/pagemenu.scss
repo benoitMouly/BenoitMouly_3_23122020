@@ -1,0 +1,28 @@
+@use "general.scss";
+
+.illustration img{
+object-fit: cover;
+height: 10rem;
+width: 100%;
+}
+
+.banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fas.fa-arrow-left{
+    position:relative;
+    right: 70px;
+}
+
+.restaurant__name{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Shrikhand;
+    margin: 20px;
+    line-height: 0;
+}
