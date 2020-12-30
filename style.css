@@ -136,6 +136,7 @@ li.fonctionnement__step p {
   flex-direction: column;
   border-radius: 1rem 1rem 1rem 1rem;
   background-color: #f3f3f3;
+  text-decoration: none;
 }
 .restaurant__list img {
   object-fit: cover;
