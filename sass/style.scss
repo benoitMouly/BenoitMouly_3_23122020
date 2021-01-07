@@ -1,13 +1,5 @@
-$lighter-grey: #fafafa;
-$middle-grey: #f3f3f3;
-$darker-grey: #424242;
-$primary-color: #9356DC;
-$secondary-color: #FF79DA;
-$tertiary-color: #99E2D0;
-$general-shadow: rgba(0,0,0,0.2) 0px 3px 8px;
-$font-after-icons: 900;
-
-@import "libs/mixins.scss";
+@import "mixins.scss";
+@import "general.scss";
 
     
 body{
@@ -166,12 +158,13 @@ ol.fonctionnement__steps li.fonctionnement__step {
       border-radius: 1rem 1rem 1rem 1rem;
       background-color: $middle-grey;
       text-decoration: none;
+      color: black;
         img{
             object-fit: cover;
-            
             height: 8rem;
             border-radius: 1rem 1rem 0rem 0rem;
         }
+
   }
 
 .list__isnew{

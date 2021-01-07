@@ -1,0 +1,14 @@
+@import "general.scss";
+@import "mixins.scss";
+
+/* check test */
+@mixin animation-testApparence {
+
+    /*transition: transform  $trans-dur cubic-bezier(0, .75, .08, 1) ease-in-out;*/
+    transform: translateY(-20px);
+    transition: transform $trans-dur cubic-bezier(.17,.67,.83,.67);
+}
+
+/*@mixin transition-delay {
+    transition-delay: 0s, 1500ms;
+}*/
