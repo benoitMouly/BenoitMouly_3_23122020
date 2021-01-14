@@ -1,11 +1,17 @@
 @import "./utils/mixins.scss";
 @import "./utils/animations.scss";
-@import "./utils/variables";
+@import "./utils/_variables";
 
 @import "./base/_general.scss";
 
 @import "./pages/_pagemenu.scss";
 @import "./pages/_homepage.scss";
 
+@import "./components/buttons.scss";
 
+.footer__elements{
 
+    margin-left: 5%;
+    line-height: 2em;
+
+}
