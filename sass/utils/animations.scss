@@ -1,15 +1,18 @@
-@import "//base/general.scss";
-@import "//utils/mixins.scss";
-@import "//pages/pagemenu";
+@import "//sass/base/general.scss";
+@import "./mixins.scss";
+@import "//sass/pages/pagemenu";
 
 /* check test */
 @mixin animation-testApparence {
 
-    /*transition: transform  $trans-dur cubic-bezier(0, .75, .08, 1) ease-in-out;*/
     transform: translateY(-20px);
     transition: transform $trans-dur cubic-bezier(.17,.67,.83,.67);
 }
 
-/*@mixin transition-delay {
-    transition-delay: 0s, 1500ms;
-}*/
+@mixin animation-color-gradient{
+    background: -webkit-gradient(linear, left top, left bottom, from($primary-color), to($secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+    transition: opacity 1000ms;
+}
