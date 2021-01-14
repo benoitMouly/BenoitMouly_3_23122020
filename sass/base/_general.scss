@@ -1,4 +1,4 @@
-@import "//main.scss";
+@import "//sass/main.scss";
 
     
 body{
@@ -11,7 +11,7 @@ body{
 
 a{
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 .logo{
@@ -46,6 +46,8 @@ a{
 
 }
 
+
+
 footer{
 
     display: flex;
@@ -53,12 +55,13 @@ footer{
     justify-content: center;
     align-items: flex-start;
     background-color: #292B2C;
+    width: 100%;
 }
 
 .footer__elements{
 
     margin-left: 5%;
-    line-height: 0px;
+    line-height: 2em;
 
 }
 
