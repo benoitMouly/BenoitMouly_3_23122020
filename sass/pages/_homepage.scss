@@ -75,15 +75,7 @@ body{
         }
         &__button .btn{
 
-        border-radius: 30px;
-        background: linear-gradient(345deg, rgba(147,86,220,1) 35%, rgba(255,121,218,1) 91%);
-        box-shadow: $general-shadow;
-        color: white;
-        outline: none;
-        border: none;
-        font-family: Roboto;
-        font-weight: 600;
-        border-radius: 40px;
+            @include button-colored;
         }
 }
 
@@ -135,6 +127,11 @@ ol.fonctionnement__steps li.fonctionnement__step {
     border-radius: 50px;
     box-shadow:$general-shadow;
     font-family: Roboto;
+        &:hover{
+            background: $gradient;
+            color: white;
+            box-shadow: $general-shadow-accentued;
+        }
   }
 .i.fas.fa-mobile-alt{
     align-items: stretch;
