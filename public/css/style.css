@@ -1,9 +1,5 @@
 @charset "UTF-8";
-@import "//sass/base/general.scss";
-@import "//sass/pages/pagemenu";
-/* check test */
-@import "//sass/main.scss";
-@import '//sass/main.scss';
+
 @import "//main.scss";
 body {
   font-family: Roboto;
