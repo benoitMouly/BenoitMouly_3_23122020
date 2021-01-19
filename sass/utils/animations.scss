@@ -1,18 +1,106 @@
-@import "//sass/base/general.scss";
+@import "//sass/base/_general.scss";
 @import "./mixins.scss";
 @import "//sass/pages/pagemenu";
+@import "//sass/utils/_variables";
+@import '//sass/main.scss';
 
 /* check test */
-@mixin animation-testApparence {
 
-    transform: translateY(-20px);
-    transition: transform $trans-dur cubic-bezier(.17,.67,.83,.67);
+
+@keyframes move-top-menu{
+    0%   {transform: translateY(20px);
+    opacity: 0;}
+
+    50% {transform: tranlate(10px);
+    opacity: 0.5;}
+100%    {transform: translateY(0px);
+    opacity:1;}
 }
 
-@mixin animation-color-gradient{
-    background: -webkit-gradient(linear, left top, left bottom, from($primary-color), to($secondary-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    opacity: 1;
-    transition: opacity 1000ms;
+
+
+.load__spinner{
+
+
+    display: flex;
+    animation-name: fade;
+    animation-delay: 3.5s;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5rem;
+    position: fixed;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    overflow: hidden;
+
+&--element{
+             
+    font-family: Shrikhand;
+            display: flex;
+            flex-direction: row;
+            row-gap: 0;
+            position: relative;
+            font-size: 3rem;
+            color: rgba($color: #000000, $alpha: 0.8);
+            background: rgba(255, 255, 255, 0.0);
 }
+}
+
+
+.barrelroll{
+    animation-duration : 1s;
+    animation-name: roll;
+    animation-iteration-count: 1;
+
+}
+    
+.N1{
+    color: #9356DC;
+    animation-delay: 0.5s;
+}
+
+.N2{
+        color: #FF79DA;
+        animation-delay: 1.5s;
+    }
+
+.N3{
+        color: #99E2D0;
+        animation-delay: 2.5s;
+    }
+
+
+
+@keyframes roll {
+    from {
+      transform: rotate(-360deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes fade {
+    0% {
+      
+       transform: translateY(0%);
+    }
+
+    100% {
+        
+        transform: translateY(-100%);
+        opacity: 1;
+        visibility: hidden;
+    }
+
+
+ }   

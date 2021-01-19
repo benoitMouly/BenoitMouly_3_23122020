@@ -21,6 +21,11 @@
     margin-top: -50px;
     position: relative;
     z-index: 98;
+
+    @include responsive-largescreen{
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    }
 }
 
 @mixin container-title-h3{
@@ -29,25 +34,31 @@
     font-size: 0.8em;
     font-family: Roboto, Serif;
     line-height: 0;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     border-bottom: 3px solid $tertiary-color;
     display: inline-block;
     padding-bottom: 10px;
     font-family: sans-serif;
     width: 40px;
+    @include responsive-largescreen{
+        font-size: 1em;
+    }
 }
 
 @mixin container-plat{
     background-color: white;
-    padding: 2px;
+    padding: 0;
     border-radius: 9px;
     display: flex;
+    width: 100%;
+    height: 100%;
     flex-direction: row;
     row-gap: 50px;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: flex-end;
+    align-content: stretch;
     line-height:3px;
+    box-sizing: border-box;
     box-shadow: $general-shadow;
     }
 
@@ -56,11 +67,12 @@
     background: $gradient;
     box-shadow: $general-shadow;
     color: white;
-    outline: non;
+    outline: none;
     border: none;
     font-family: Roboto;
     font-weight: 500;
     border-radius: 40px;
+    cursor: pointer;
     opacity: 1;
         &:hover{
             background: $gradient;
@@ -96,11 +108,25 @@
             -webkit-text-fill-color: transparent;
             z-index: 2;
             font-size: 1em;
+          
                 &:hover{
 
                     opacity: 1;
-                    transition: opacity 100ms;
+                    transition: opacity 1000ms;
+                    
                 }
         }
 
+}
+
+@mixin responsive-largescreen{
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin responsive-midscreen{
+    @media screen and (min-width: 767px) and (max-width: 1024px){
+        @content;
+    }
 }
