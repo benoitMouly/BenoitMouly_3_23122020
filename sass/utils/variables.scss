@@ -1,0 +1,16 @@
+$lighter-grey: #fafafa;
+$middle-grey: #f3f3f3;
+$darker-grey: #424242;
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+$general-shadow: 0px 3px 8px rgba(0,0,0,0.2);
+$general-shadow-accentued: 0px 3px 8px rgba(0,0,0,0.5);
+$font-after-icons: 900;
+$trans-dur: 3000ms;
+$gradient: linear-gradient(171deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 90%);
+$gradient-transparency: linear-gradient(171deg, rgba(147,86,220,0.05) 0%, rgba(255,121,218,0.05) 90%);
+$gradient-rgb: rgb(147,86,220);
+$anim-dur: 2500ms;
+$num-menu: 9;
+$anim-delay: $anim-dur / $num-menu;

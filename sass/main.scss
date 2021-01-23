@@ -1,10 +1,10 @@
 @import "./utils/mixins.scss";
 @import "./utils/animations.scss";
-@import "./utils/_variables";
+@import "./utils/variables";
 
-@import "./base/_general.scss";
+@import "./base/general.scss";
 
-@import "./pages/_pagemenu.scss";
-@import "./pages/_homepage.scss";
+@import "./pages/pagemenu.scss";
+@import "./pages/homepage.scss";
 
 @import "./components/buttons.scss";

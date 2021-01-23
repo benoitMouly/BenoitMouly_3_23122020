@@ -1,0 +1,247 @@
+
+body{
+
+    font-family: Roboto;
+    font-size: 1rem;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+
+.illustration {
+    height: 15rem;
+    width: 100%;
+    @include responsive-largescreen{
+        height: 15rem;
+    }
+
+    & img{
+    object-fit: cover;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+}
+
+.banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fas.fa-arrow-left{
+    position:relative;
+    right: 70px;
+    color:black;
+    @include responsive-largescreen{
+        position: relative;
+        right: 140px;
+        font-size: 2em;
+        
+    }
+}
+
+
+.top-head{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin : 0px 10px 0px 10px;
+    padding-top: 20px;
+   
+}
+
+.restaurant__btn{
+
+    @include heart__button;
+}
+
+.restaurant__name{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Shrikhand;
+    line-height: 0;
+}
+
+
+#corpus{
+
+    @include corpus-style;
+}
+
+
+.container__plats{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    row-gap: 15px;
+    margin: 15px;
+    
+}
+
+.container__title h3{
+    @include container-title-h3;
+}
+
+@keyframes opacity-debut{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+#plats{
+    padding: 10px;
+    @include responsive-largescreen{
+    display: flex;
+    padding: 30px;
+    }
+}
+
+.container__plats{
+    @include responsive-largescreen{
+    width: 100%;
+    }
+}
+
+.container__plat{
+
+    @include container-plat;
+    cursor: pointer;
+    animation: move-top-menu $anim-dur backwards;
+    position: relative;
+    flex-grow: 1;
+    flex-basis: 0;
+    &--description{
+            margin-left: 10px;
+            margin-top: 0;
+            width: 70%;
+            flex-wrap: wrap;
+            align-self: center;
+            
+
+    }
+            & h3{
+                font-size: 0.7em;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                @include responsive-largescreen{
+                font-size: 1em;
+                }
+                  
+            }
+                & p{
+                    font-size: 0.6em;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    line-height: 1;
+                    @include responsive-largescreen{
+                        font-size: 1em;
+                        }
+                }
+                    &--price{
+                        
+                        margin-right: 0px;
+                        text-align: center;
+                        font-weight: bold;
+                        font-size: 1.3em;
+                        color: $darker-grey;
+                        align-self: center;
+                        @include responsive-largescreen{
+                            font-size: 1em;
+                        }
+
+                    }
+
+                        &--check{
+
+                            display: flex;
+                            justify-content: center;
+                            align-self: stretch;
+                            background-color: $tertiary-color;
+                            width: 0%;
+                            border-radius: 0px 9px 9px 0px;
+                        }
+
+                        &--rotate{
+                            transform: rotate(0deg);
+                        }
+                        & .fas.fa-check-circle{
+                            
+                            display: none;
+                            width: 0%;
+                            height: 100%;
+                            font-size: 1em;
+                            color: white;
+                            @include responsive-largescreen{
+                                margin-top: 6px;
+                                }
+                            
+                            
+                        }
+
+                        &:hover{
+                            .container__plat--description{
+                                width: 60%;
+                            }
+                            
+                            .container__plat--price{
+                                width: 20%;
+                            }
+                            
+                            .container__plat--check{
+                                width: 15%;
+                                transition-duration: 0.5s;
+                                
+                            }
+                            
+                            .container__plat--rotate{
+
+                                transition-duration: 0.5s;
+                                transform: rotate(-360deg);
+                                transition: transform 500ms ease-in-out;
+                                
+                            }
+                            .fas.fa-check-circle{
+                                
+                                display: block;
+                                height: 100%;
+                                font-size: 1em;
+                                position: relative;
+                                top: 30%;
+                                color: white;
+                               
+                            }
+
+                        }
+
+}
+
+@for $i from 0 to 9 {
+    .delay--#{$i} {
+      animation-delay:  #{$i/$num-menu}s;
+    }
+  }
+
+
+
+.corpus__btn--command:nth-of-type(1){
+
+        @include button-colored;
+        align-self: center;
+        text-align: center;
+        margin-bottom: 15px;
+    
+}
+
+

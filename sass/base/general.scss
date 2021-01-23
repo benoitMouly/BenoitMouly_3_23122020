@@ -1,0 +1,97 @@
+@import "//sass/main.scss";
+
+    
+body{
+
+    font-family: Roboto;
+    font-size: 1rem;
+    width: 100%;
+    margin: 0;
+    @include responsive-largescreen{
+        font-size: 2rem;
+    }
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.logo{
+
+    font-family: Shrikhand;
+    font-size: 1em;
+    line-height: 0;
+    @include responsive-largescreen{
+        font-size: 2em !important;
+        color: RED;
+    }
+    
+    &__banner {
+        text-align: center;
+        color: black;
+    }
+
+    &__footer {
+        text-align: start;
+        color: white;
+    }
+
+    
+}
+
+#heading{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner{
+
+    z-index: 99;
+    box-shadow: $general-shadow;
+    width: 100%;
+
+}
+
+
+
+footer{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #292B2C;
+    width: 100%;
+}
+
+.footer__elements{
+
+    margin-left: 5%;
+    line-height: 2em !important;
+
+}
+
+
+.footer__list{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    list-style: none;
+    padding: 0;
+    font-weight: 500;
+
+    &--element{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 5px;
+        list-style: none;
+    }
+
+    &--element:hover{
+        text-decoration: underline;
+    }
+}
