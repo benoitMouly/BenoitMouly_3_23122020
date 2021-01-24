@@ -88,7 +88,7 @@ body{
     @include container-title-h3;
 }
 
-@keyframes opacity-debut{
+/*@keyframes opacity-debut{
     0%{
         opacity: 0;
     }
@@ -96,7 +96,7 @@ body{
         opacity: 1;
     }
 }
-
+*/
 
 
 #plats{
@@ -227,7 +227,7 @@ body{
 
 }
 
-@for $i from 0 to 9 {
+@for $i from 0 to 10 {
     .delay--#{$i} {
       animation-delay:  #{$i/$num-menu}s;
     }
