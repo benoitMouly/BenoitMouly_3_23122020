@@ -131,16 +131,17 @@ body{
 
     }
             & h3{
-                font-size: 0.7em;
+                font-size: 0.9em;
                 white-space: nowrap;
                 text-overflow: ellipsis;
+                overflow:hidden;
                 @include responsive-largescreen{
                 font-size: 1em;
                 }
                   
             }
                 & p{
-                    font-size: 0.6em;
+                    font-size: 0.8em;
                     white-space: nowrap;
                     text-overflow: ellipsis;
                     overflow: hidden;
